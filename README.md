@@ -78,3 +78,23 @@ b) Write a program to generate and print Fibonacci series with the following req
      i)    Implement the above using shmget and shmat
      
     Note: Shared object should be removed at the end in the program 
+
+10 a) Write a program to simulate cat command using system calls. 
+ 
+b) Write a program to generate and print Prime nos. between a given range (between M & N) with the following requirements: 
+
+  - M  & N should be passed as command line arguments
+  
+   - Error checking should be done to verify the required no. of arguments at the command line
+     
+   - Parent program should create a child and distribute the task of generating Prime numbers to its child.
+     
+   - The code for generating Prime numbers should reside in different program.
+     
+   - Child should write the generated Prime numbers to a shared memory.
+     
+   - Parent process has to print the Prime numbers by retrieving from the shared memory.
+     
+   i)   Implement the above using shm_open and mmap 
+    
+          Note: Shared object should be removed at the end in the program. 
