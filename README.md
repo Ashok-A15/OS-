@@ -63,4 +63,18 @@ b) Write a program to generate and print Fibonacci series with the following req
     
       i)    Implement the above using shm_open and mmap
      
-           Note: Shared object should be removed at the end in the program 
+           Note: Shared object should be removed at the end in the program
+     9 a) Write a shell program to check whether a given no. is a palindrome or not 
+ 
+       b) Write a program to generate and print N ODD numbers with the following requirements: 
+      - Parent program should create a child and distribute the task of generating odd numbers to its child.
+     
+      - The code for generating odd numbers should reside in different program.
+     
+      - Child should write the generated odd numbers to a shared memory.
+     
+     - Parent process has to print the odd numbers by retrieving from the shared memory.
+        
+     i)    Implement the above using shmget and shmat
+     
+    Note: Shared object should be removed at the end in the program 
