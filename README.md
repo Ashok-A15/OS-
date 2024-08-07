@@ -92,9 +92,19 @@ b) Write a program to generate and print Prime nos. between a given range (betwe
    - The code for generating Prime numbers should reside in different program.
      
    - Child should write the generated Prime numbers to a shared memory.
+
+11 a) Write a program with two threads and a main thread. Schedule the task of calculating the natural sum upto ‘n’ terms and factorial of ‘n’ on these threads.
+
+Note: The main thread should read ‘n’ from command line and pass it as parameter to remaining threads. Terminate the threads using system calls. 
+
+b) Write a program that implements solution to Producer – Consumer problem using mutex and semaphores.
      
    - Parent process has to print the Prime numbers by retrieving from the shared memory.
      
    i)   Implement the above using shm_open and mmap 
     
           Note: Shared object should be removed at the end in the program. 
+         
+12 a) Write a shell program to find the largest of three numbers 
+
+b) Write a program that implements solution to Readers-Writers problem using mutex and semaphores.
