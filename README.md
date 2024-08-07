@@ -26,3 +26,40 @@ b) Implement Priority Non-preemptive scheduling algorithm by defining process st
   iv. Going to the 3rd character in the file
 
 b) Implement FCFS scheduling algorithm by defining process structure. 
+
+6 a) Write a program to demonstrate zombie and orphan process. 
+
+b) Implement SJF Non-preemptive scheduling algorithm by defining 
+process structure. 
+
+7 a) Write a program to simulate grep command using system calls 
+ 
+b) Write a program to generate and print Fibonacci series with the 
+following requirements: 
+
+   - Parent program should create a child and distribute the task of generating Fibonacci no to its child.
+
+   - The code for generating Fibonacci series should reside in different program.
+
+   - Child should write the generated Fibonacci series to a shared memory.
+    
+   - Parent process has to print by retrieving the Fibonacci series from theshared memory. 
+i)    Implement the above using shmget and shmat
+
+Note: Shared object should be removed at the end in the program
+
+8 a) Write a program to simulate ls command using system calls. 
+ 
+b) Write a program to generate and print Fibonacci series with the following requirements: 
+
+   - Parent program should create a child and distribute the task of generating Fibonacci no to its child.
+   - 
+   - The code for generating Fibonacci series should reside in different program.
+   - 
+   - Child should write the generated Fibonacci series to a shared memory.
+   - 
+   - Parent process has to print by retrieving the Fibonacci series from the shared memory
+   - 
+      i)    Implement the above using shm_open and mmap
+     
+           Note: Shared object should be removed at the end in the program 
