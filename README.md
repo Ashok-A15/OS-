@@ -43,7 +43,8 @@ following requirements:
 
    - Child should write the generated Fibonacci series to a shared memory.
     
-   - Parent process has to print by retrieving the Fibonacci series from theshared memory. 
+   - Parent process has to print by retrieving the Fibonacci series from theshared memory.
+     
 i)    Implement the above using shmget and shmat
 
     Note: Shared object should be removed at the end in the program
