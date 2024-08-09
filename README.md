@@ -1,4 +1,5 @@
 # OS-  
+
 1 a) Write a shell program to check whether a given number is palindrome or not 
 
 b) Implement SJF Pre-emptive scheduling algorithm by defining process structure. 
