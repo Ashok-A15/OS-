@@ -11,7 +11,7 @@ void main()
     struct process P[10],temp;
     printf("Enter the number of process\n");
     scanf("%d",&n);
-    //printf("Enter the arrival time and burst time\n");
+    printf("Enter the arrival time and burst time\n");
     for(int i=0;i<n;i++)
     {
         P[i].ID=i+1;
