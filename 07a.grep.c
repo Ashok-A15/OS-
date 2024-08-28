@@ -18,3 +18,7 @@ void main(){
 		if(strstr(temp,pattern))  printf("%s",temp);
 	}
 }
+// gcc grep.c
+//./a.out
+//enter file grep.c
+//enter pattern>>printf
