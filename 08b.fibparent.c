@@ -1,39 +1,53 @@
-//Include -lrt while compiling
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/shm.h>
-#include <sys/wait.h>
-#include <sys/mman.h>
 #include <fcntl.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/wait.h>
+#include <sys/shm.h>
+#include <sys/mman.h>
 
-void main(){
-	int fd, n;
-	int buffer[25];
-	int *shared_memory;
-	
-	fd = shm_open("chandan",O_CREAT|O_RDWR, 0666);
-	ftruncate(fd,1024); //allocating 1024 bytes of memory to shared memory
-	shared_memory = (int*)mmap(NULL, 1024, PROT_WRITE, MAP_SHARED, fd, 0);
-	
-	printf("Enter n>> ");
-	scanf("%d",&n);
-	char nstr[20];
-	sprintf(nstr, "%d", n);
-	
-	if (fork()==0){
-		execlp("./child","child",nstr,NULL);
-	}
-	else{
-		wait(NULL);
-		
-		for(int i=0;i<n;i++){
-			printf("%d ",shared_memory[i]);
-		}
-		printf("\n");
-		
-		shm_unlink("chandan");
-	
-	}
+int main(int argc, char *argv[])
+{
+    int i, k, n1, n2, n3;
+    const int SIZE = 4096;
+    pid_t pid;
+    int shm_fd;
+    void *shmptr;
+
+    if (argc > 1)
+    {
+        sscanf(argv[1], "%d", &i); // or i=atoi(argv[1)
+        if (i < 1)
+        {
+            printf("\nWrong input given!!\n");
+            return 0;
+        }
+    }
+    else
+    {
+        printf("\nN is not passed in the command line!!\n");
+        exit(0);
+    }
+
+    pid = fork();
+    if (pid == 0)
+    {
+        // This is the child part
+        execlp("./fib", "fib", argv[1], NULL);
+    }
+    else if (pid > 0)
+    {
+        wait(NULL);
+        printf("\n[PARENT] Child process completed\n");
+        shm_fd = shm_open("OS", O_RDONLY, 0666);
+        shmptr = mmap(0, 4096, PROT_READ, MAP_SHARED, shm_fd, 0);
+        printf("\nParent printing:\n");
+        printf("%s\n", (char *)shmptr);
+        shm_unlink("OS");
+    }
+
+    return 0;
 }
