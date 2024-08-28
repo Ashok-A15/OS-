@@ -20,5 +20,5 @@ void main(){
 }
 // gcc grep.c
 //./a.out
-//enter file grep.c
+//enter filenmame>> grep.c
 //enter pattern>>printf
