@@ -24,3 +24,5 @@ void main()
     n = read(fd, buffer, 5);
     write(0, buffer, n);
 }
+//create file ex.txt
+//after normal execution
