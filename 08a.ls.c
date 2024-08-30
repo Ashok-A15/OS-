@@ -22,9 +22,3 @@ void main(int argc, char* argv[]){
 		printf("%s\n",dirp->d_name);
 	}
 }
-// normal run
-//after that create directory mkdir
-//cd 
-//create ex
-//cd ..
-//normal run ./a.out dir
