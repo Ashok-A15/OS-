@@ -1,5 +1,4 @@
 
-
 #!/bin/bash
 
 read -p "Enter start (2-x)>> " start
