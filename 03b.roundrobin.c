@@ -1,3 +1,5 @@
+
+
 #include<stdio.h>
 struct pro{
     int id,at,bt,ct,wt,tt,rt,isCmp,qfg;
